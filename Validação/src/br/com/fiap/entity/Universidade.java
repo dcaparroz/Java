@@ -7,7 +7,6 @@ import javax.persistence.*;
 public class Universidade {
 	
 	private static final long serialVersionUID = 1L;
-
 	
 /* Como "linkar" a tabela de universidade com a de curso ?
  * 
