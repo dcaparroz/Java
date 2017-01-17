@@ -5,11 +5,15 @@ import javax.persistence.*;
 @Entity
 @Table(name="universidade")
 public class Universidade {
+	
+	private static final long serialVersionUID = 1L;
+
+	
 /* Como "linkar" a tabela de universidade com a de curso ?
  * 
  */
 	@Id @GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_UNIVERSIDADE")
 	private Integer Id;
 	
 	@Column(name="NOME")

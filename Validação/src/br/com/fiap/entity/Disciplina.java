@@ -6,8 +6,11 @@ import javax.persistence.*;
 @Table(name="disciplina")
 public class Disciplina {
 	
+	private static final long serialVersionUID = 1L;
+
+	
 	@Id@GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_DISCIPLINA")
 	private Integer id;
 	
 	@Column(name="NOME")
@@ -15,6 +18,7 @@ public class Disciplina {
 /* Linnkar a tabela de curso com a disciplina como?
  * 	
  */
+
 	@Column(name="IDCURSO")
 	private Integer Curso;
 /*

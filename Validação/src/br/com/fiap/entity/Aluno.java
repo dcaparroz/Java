@@ -13,30 +13,30 @@ public class Aluno {
 	private static final long serialVersionUID = 1L;
 // Many to one com ID usuario ???	para indicar qual o usuario é aluno
 	@Id @GeneratedValue
-	@Column(name="ID")
-	private Integer Id;
+	@Column(name="ID_ALUNO")
+	private Integer id;
 	
 	@Column(name="NOME")
 	private String nome;
 //Many to one com ID curso ???	para indicar de qual curso pertence o aluno
 	@Column(name="CURSO")
-	private Integer IdCurso;
+	private Integer idCurso;
 	
 
 	public Integer getIdCurso() {
-		return IdCurso;
+		return idCurso;
 	}
 
 	public void setIdCurso(Integer idCurso) {
-		IdCurso = idCurso;
+		idCurso = idCurso;
 	}
 
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Integer id) {
-		Id = id;
+		id = id;
 	}
 
 	public String getNome() {

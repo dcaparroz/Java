@@ -8,14 +8,15 @@ public class Curso {
 	private static final long serialVersionUID = 1L;
 
 	@Id @GeneratedValue
-	@Column(name="ID")
+	@Column(name="ID_CURSO")
 	private Integer IdCurso;
 	
 	@Column(name="NOME")
 	private String nome;
 /* Many to one com ID universidade para indicar de qual universidade pertence o
    curso */
-	@Column(name="IDUNIVERS")
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="ID_UNIVERSIDADE")
 	private Integer IdUniversidade;
 	
 	public Integer getIdCurso() {
