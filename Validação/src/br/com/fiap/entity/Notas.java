@@ -6,12 +6,11 @@ import javax.persistence.*;
 @Table(name="notas")
 public class Notas {
 	
-	private static final long serialVersionUID = 1L;
 
 	@Id
 	@ManyToOne(fetch =FetchType.LAZY)
 	@JoinColumn(name="ID_DISCIPLINA")
-	private Integer id;
+	private Disciplina disciplina;
 
 	@Column(name="PROJETO1")
 	private Integer nota1;

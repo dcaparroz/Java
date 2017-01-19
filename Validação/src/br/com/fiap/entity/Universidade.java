@@ -1,12 +1,14 @@
 package br.com.fiap.entity;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="universidade")
 public class Universidade {
-	
-	private static final long serialVersionUID = 1L;
 	
 /* Como "linkar" a tabela de universidade com a de curso ?
  * 
@@ -18,6 +20,10 @@ public class Universidade {
 	@Column(name="NOME")
 	private String nome;
 
+	
+	@OneToMany(cascade= CascadeType.ALL,  fetch = FetchType.LAZY, mappedBy ="curso")
+	private Set<Curso> cursos= new HashSet<Curso>();
+	
 	public Integer getId() {
 		return Id;
 	}
